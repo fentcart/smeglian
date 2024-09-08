@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smeglian</title>
+    <link rel="icon" href="vorp.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(25, 25, 25);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loader img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-">
+    <div id="loader">
+        <img class="animate-bounce" src="vorp.png" alt="Loading Image">
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+                document.getElementById('loader');
+        });
+    </script>
+</body>
+</html>
